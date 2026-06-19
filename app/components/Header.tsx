@@ -5,8 +5,8 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__top">
-        <h1>
-          <Link to="/">Job Board</Link>
+        <h1 className="header__title">
+          <Link to="/" className="header__title-link">Job Board</Link>
         </h1>
       </div>
       <SearchForm />

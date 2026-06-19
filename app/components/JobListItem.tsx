@@ -20,7 +20,7 @@ export default function JobListItem({ job }: JobListItemProps) {
         <div className="job-item__badge">9T</div>
 
         <div className="job-item__middle">
-          <h3 className="third-heading">{job.title}</h3>
+          <h3 className="job-item__title">{job.title}</h3>
           <p className="job-item__company">9th Tech</p>
         </div>
 

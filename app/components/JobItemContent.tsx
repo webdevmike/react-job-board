@@ -13,7 +13,7 @@ export default function JobItemContent() {
   if (isLoading) {
     return (
       <section className="job-details">
-        <div>
+        <div className="job-details__content">
           <Spinner />
         </div>
       </section>
@@ -30,8 +30,8 @@ export default function JobItemContent() {
 
   return (
     <section className="job-details">
-      <div>
-        <img src="/job-details.avif" alt="#" />
+      <div className="job-details__content">
+        <img className="job-details__image" src="/job-details.avif" alt="#" />
 
         <section className="job-info">
           <div className="job-info__left">
@@ -42,7 +42,7 @@ export default function JobItemContent() {
           </div>
 
           <div className="job-info__right">
-            <h2 className="second-heading">{job.title}</h2>
+            <h2 className="job-info__title">{job.title}</h2>
             <p className="job-info__company">9th Tech</p>
             <p className="job-info__description">
               Join us as we pursue our disruptive new vision to make machine
@@ -68,7 +68,7 @@ export default function JobItemContent() {
         <div className="job-details__other">
           <section className="qualifications">
             <div className="qualifications__left">
-              <h4 className="fourth-heading">Qualifications</h4>
+              <h4 className="qualifications__title">Qualifications</h4>
               <p className="qualifications__sub-text">
                 Other qualifications may apply
               </p>
@@ -82,7 +82,7 @@ export default function JobItemContent() {
 
           <section className="reviews">
             <div className="reviews__left">
-              <h4 className="fourth-heading">Company reviews</h4>
+              <h4 className="reviews__title">Company reviews</h4>
               <p className="reviews__sub-text">
                 Recent things people are saying
               </p>

@@ -9,6 +9,7 @@ export default function SearchForm() {
       <MagnifyingGlassIcon className="search__icon" width={20} height={20} />
 
       <input
+        className="search__input"
         spellCheck="false"
         type="text"
         placeholder="Find remote developer jobs..."
