@@ -1,13 +1,26 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
+import { useJobsQuery } from "~/hooks/useJobsQuery";
+import Spinner from "~/components/Spinner";
+import Error from "~/components/Error";
 
 export default function Home() {
-  return <Welcome />;
+  const { data: jobs, isLoading, isError } = useJobsQuery(1);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const firstJobId = jobs?.[0]?.id;
+    if (!firstJobId) return;
+    navigate(`/${firstJobId}`);
+  }, [jobs, navigate]);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (isError) {
+    return <Error message="Sorry, could not load jobs." />;
+  }
+
+  return null;
 }
