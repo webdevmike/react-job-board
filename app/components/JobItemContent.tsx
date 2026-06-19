@@ -53,7 +53,7 @@ export default function JobItemContent() {
           </div>
 
           <div className="job-info__right">
-            <h2 className="second-heading">Front End React Engineer</h2>
+            <h2 className="second-heading">{job.title}</h2>
             <p className="job-info__company">9th Tech</p>
             <p className="job-info__description">
               Join us as we pursue our disruptive new vision to make machine

@@ -1,13 +1,27 @@
+import { Link, useParams } from "react-router";
 import BookmarkIcon from "./BookmarkIcon";
+import type { JobItem } from "~/lib/types";
 
-export default function JobListItem() {
+type JobListItemProps = {
+  job: JobItem;
+};
+
+export default function JobListItem({ job }: JobListItemProps) {
+  const { id } = useParams();
+
+  if (!id) return null;
+
   return (
-    <li className="job-item">
-      <a className="job-item__link">
+    <li
+      className={["job-item", Number(id) === job.id && "job-item--active"]
+        .filter(Boolean)
+        .join(" ")}
+    >
+      <Link to={`/${job.id}`} className="job-item__link">
         <div className="job-item__badge">9T</div>
 
         <div className="job-item__middle">
-          <h3 className="third-heading">Front End React Engineer</h3>
+          <h3 className="third-heading">{job.title}</h3>
           <p className="job-item__company">9th Tech</p>
         </div>
 
@@ -15,7 +29,7 @@ export default function JobListItem() {
           <BookmarkIcon />
           <time className="job-item__time">2d</time>
         </div>
-      </a>
+      </Link>
     </li>
   );
 }

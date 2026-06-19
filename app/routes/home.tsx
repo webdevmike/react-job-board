@@ -5,7 +5,8 @@ import Spinner from "~/components/Spinner";
 import Error from "~/components/Error";
 
 export default function Home() {
-  const { data: jobs, isLoading, isError } = useJobsQuery(1);
+  const { data, isLoading, isError } = useJobsQuery(1);
+  const jobs = data?.jobs;
   const navigate = useNavigate();
 
   useEffect(() => {

@@ -18,7 +18,9 @@ export default function JobDetails() {
       <Background />
       <Header />
       <Container>
-        <Sidebar />
+        <div className="sidebar">
+          <Sidebar />
+        </div>
         <JobItemContent />
       </Container>
       <Footer />

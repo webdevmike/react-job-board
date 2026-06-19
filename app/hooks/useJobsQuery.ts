@@ -17,12 +17,15 @@ export function useJobsQuery(page: number, searchText = "") {
       const filteredJobs = searchText
         ? allJobs.filter((job) => {
             // Search by title
-            return searchText.toLowerCase().includes(job.title.toLowerCase());
+            return job.title.toLowerCase().includes(searchText.toLowerCase());
           })
         : allJobs;
 
       const start = (page - 1) * JOBS_PER_PAGE;
-      return filteredJobs.slice(start, start + JOBS_PER_PAGE);
+      return {
+        jobs: filteredJobs.slice(start, start + JOBS_PER_PAGE),
+        totalJobCount: filteredJobs.length,
+      };
     },
   });
 }

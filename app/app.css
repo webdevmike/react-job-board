@@ -511,7 +511,9 @@ body::-webkit-scrollbar {
   color: rgba(0, 0, 0, 0.9);
   caret-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(255, 255, 255, 0.9);
-  transition: all 0.2s, box-shadow 0.1s;
+  transition:
+    all 0.2s,
+    box-shadow 0.1s;
 }
 
 .search input::selection {
@@ -638,7 +640,9 @@ body::-webkit-scrollbar {
   color: #747c82;
   background-color: #eceff2;
   cursor: pointer;
-  transition: all 0.2s, visibility 0s;
+  transition:
+    all 0.2s,
+    visibility 0s;
   gap: 2px;
   display: flex;
   align-items: center;
@@ -1022,6 +1026,18 @@ body::-webkit-scrollbar {
   border-right: 5px solid #e2e7e9;
   border-bottom: 5px solid #e2e7e9;
   border-left: 5px solid #ccd1d3;
+}
+
+.sidebar__loading,
+.sidebar__error {
+  flex: 1;
+  position: relative;
+}
+
+.sidebar__error,
+.sidebar__text {
+  padding-top: 20px;
+  text-align: center;
 }
 
 .spinner--search {

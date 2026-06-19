@@ -1,3 +1,7 @@
+import { useJobList } from "~/contexts/JobListContextProvider";
+
 export default function ResultsCount() {
-  return <p className="count">0 results</p>;
+  const { totalJobCount } = useJobList();
+
+  return <p className="count">{totalJobCount} results</p>;
 }

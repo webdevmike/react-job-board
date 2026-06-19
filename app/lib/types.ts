@@ -13,3 +13,5 @@ export const jobItemSchema = z.object({
 export const jobItemsSchema = z.array(jobItemSchema);
 
 export type JobItem = z.infer<typeof jobItemSchema>;
+
+export type PageDirection = "next" | "previous";
