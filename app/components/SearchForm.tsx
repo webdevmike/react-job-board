@@ -5,19 +5,16 @@ export default function SearchForm() {
   const { searchText, onSearchTextChange } = useJobList();
 
   return (
-    <form action="#" className="search">
-      <button type="submit">
-        <MagnifyingGlassIcon className="search__icon" width={20} height={20} />
-      </button>
+    <div role="search" className="search">
+      <MagnifyingGlassIcon className="search__icon" width={20} height={20} />
 
       <input
         spellCheck="false"
         type="text"
-        required
         placeholder="Find remote developer jobs..."
         value={searchText}
         onChange={(e) => onSearchTextChange(e.target.value)}
       />
-    </form>
+    </div>
   );
 }

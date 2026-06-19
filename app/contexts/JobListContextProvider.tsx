@@ -11,6 +11,7 @@ type JobListContextType = {
   isError: boolean;
   jobs: JobItem[] | undefined;
   totalJobCount: number;
+  isPlaceholderData: boolean;
   onSearchTextChange: (text: string) => void;
   onPageChange: (page: number) => void;
 };
@@ -25,7 +26,10 @@ export function JobListProvider({ children }: JobListProviderProps) {
   const [page, setPage] = useState(1);
   const [searchText, setSearchText] = useState("");
   const debouncedSearchText = useDebounce(searchText, 300);
-  const { data, isLoading, isError } = useJobsQuery(page, debouncedSearchText);
+  const { data, isLoading, isError, isPlaceholderData } = useJobsQuery(
+    page,
+    debouncedSearchText,
+  );
 
   const jobs = data?.jobs;
   const totalJobCount = data?.totalJobCount ?? 0;
@@ -46,6 +50,7 @@ export function JobListProvider({ children }: JobListProviderProps) {
     isError,
     jobs,
     totalJobCount,
+    isPlaceholderData,
     onSearchTextChange: handleSearchTextChange,
     onPageChange: handlePageChange,
   };

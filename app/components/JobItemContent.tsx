@@ -1,7 +1,6 @@
 import { ClockIcon, ValueIcon, DrawingPinIcon } from "@radix-ui/react-icons";
 import { useParams } from "react-router";
 
-import BookmarkIcon from "./BookmarkIcon";
 import Spinner from "./Spinner";
 import Error from "./Error";
 
@@ -34,21 +33,11 @@ export default function JobItemContent() {
       <div>
         <img src="/job-details.avif" alt="#" />
 
-        <a
-          className="apply-btn"
-          href="https://fictional9thtechwebsite.com/"
-          target="_blank"
-        >
-          Apply
-        </a>
-
         <section className="job-info">
           <div className="job-info__left">
             <div className="job-info__badge">9T</div>
             <div className="job-info__below-badge">
               <time className="job-info__time">2d</time>
-
-              <BookmarkIcon />
             </div>
           </div>
 
@@ -108,8 +97,8 @@ export default function JobItemContent() {
         <footer className="job-details__footer">
           <p className="job-details__footer-text">
             If possible, please reference that you found the job on{" "}
-            <span className="u-bold">rmtDev</span>, we would really appreciate
-            it!
+            <span className="u-bold">Job Board</span>, we would really
+            appreciate it!
           </p>
         </footer>
       </div>

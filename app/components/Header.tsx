@@ -1,13 +1,13 @@
-import BookmarksButton from "./BookmarksButton";
-import Logo from "./Logo";
+import { Link } from "react-router";
 import SearchForm from "./SearchForm";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header__top">
-        <Logo />
-        <BookmarksButton />
+        <h1>
+          <Link to="/">Job Board</Link>
+        </h1>
       </div>
       <SearchForm />
     </header>

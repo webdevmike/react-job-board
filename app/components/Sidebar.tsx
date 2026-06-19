@@ -6,15 +6,8 @@ import Spinner from "./Spinner";
 import Error from "./Error";
 
 export default function Sidebar() {
-  const { isLoading, isError, jobs, searchText } = useJobList();
-
-  if (isLoading) {
-    return (
-      <div className="sidebar__loading">
-        <Spinner />
-      </div>
-    );
-  }
+  const { isLoading, isError, jobs, searchText, isPlaceholderData } =
+    useJobList();
 
   if (isError) {
     return (
@@ -24,11 +17,7 @@ export default function Sidebar() {
     );
   }
 
-  if (!jobs) {
-    return null;
-  }
-
-  if (searchText && jobs.length === 0) {
+  if (searchText && jobs?.length === 0) {
     return (
       <div className="sidebar__text">
         <Error message={`No results for "${searchText}"`} />
@@ -42,7 +31,14 @@ export default function Sidebar() {
         <ResultsCount />
       </div>
 
-      <JobList jobs={jobs} />
+      {(isLoading || isPlaceholderData) && (
+        <div className="sidebar__loading">
+          <Spinner />
+        </div>
+      )}
+
+      {!isLoading && !isPlaceholderData && jobs && <JobList jobs={jobs} />}
+
       <PaginationControls />
     </>
   );

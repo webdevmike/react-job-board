@@ -2,7 +2,6 @@ import JobItemContent from "~/components/JobItemContent";
 import Sidebar from "~/components/Sidebar";
 import Background from "~/components/Background";
 import Container from "~/components/Container";
-import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 
 export function meta() {
@@ -23,7 +22,6 @@ export default function JobDetails() {
         </div>
         <JobItemContent />
       </Container>
-      <Footer />
     </>
   );
 }

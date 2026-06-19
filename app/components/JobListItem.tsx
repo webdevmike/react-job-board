@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router";
-import BookmarkIcon from "./BookmarkIcon";
 import type { JobItem } from "~/lib/types";
 
 type JobListItemProps = {
@@ -26,7 +25,6 @@ export default function JobListItem({ job }: JobListItemProps) {
         </div>
 
         <div className="job-item__right">
-          <BookmarkIcon />
           <time className="job-item__time">2d</time>
         </div>
       </Link>
