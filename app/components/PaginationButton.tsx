@@ -1,4 +1,3 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import type { PageDirection } from "~/lib/types";
 
 type PaginationButtonProps = {
@@ -18,18 +17,7 @@ export default function PaginationButton({
       onClick={onClick}
       disabled={disabled}
     >
-      {direction === "previous" && (
-        <>
-          <ArrowLeftIcon />
-          Previous
-        </>
-      )}
-      {direction === "next" && (
-        <>
-          <ArrowRightIcon />
-          Next
-        </>
-      )}
+      {direction === "previous" ? "Previous" : "Next"}
     </button>
   );
 }

@@ -157,8 +157,11 @@ body::-webkit-scrollbar {
   position: relative;
   justify-content: center;
   padding-top: 40px;
-
   animation: intro 0.3s;
+}
+
+.header__top h1 a {
+  color: #ffffff;
 }
 
 .header__submit-job {
@@ -614,7 +617,7 @@ body::-webkit-scrollbar {
 
 /* PAGINATION */
 .pagination {
-  height: 40px;
+  height: 46px;
   margin-top: auto;
   display: flex;
   align-items: center;
@@ -623,13 +626,16 @@ body::-webkit-scrollbar {
   border-top: 1px solid #e8edf0;
 }
 
+.pagination__page-count {
+  font-size: 14px;
+}
+
 .pagination__button {
-  font-size: 10px;
+  font-size: 14px;
   padding: 4px 10px;
   border-radius: 500px;
-  color: #747c82;
-  background-color: #eceff2;
-  cursor: pointer;
+  color: #ffffff;
+  background-color: #0d54be;
   transition:
     all 0.2s,
     visibility 0s;
@@ -638,34 +644,13 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-.pagination__button svg {
-  width: 10px;
-  transform: translateY(1px);
+.pagination__button:not(:disabled) {
+  cursor: pointer;
 }
 
-.pagination__button:hover,
-.pagination__button:focus {
-  background-color: #dde2e6;
-}
-
-.pagination__button--hidden {
-  visibility: hidden;
-}
-
-.pagination__button--back .pagination__icon {
-  margin-right: 3px;
-}
-
-.pagination__button--next .pagination__icon {
-  margin-left: 3px;
-}
-
-.pagination__button > span {
-  font-weight: 500;
-}
-.pagination__icon {
-  font-size: 8px;
-  color: #9fa6b0;
+.pagination__button:disabled {
+  color: #747c82;
+  background-color: #eceff2;
 }
 
 /* JOB DETAILS */

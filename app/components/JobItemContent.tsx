@@ -21,7 +21,7 @@ export default function JobItemContent() {
   }
 
   if (isError) {
-    return <Error message="Sorry, could not load jobs." />;
+    return <Error message="Sorry, could not load job." />;
   }
 
   if (!job) {
