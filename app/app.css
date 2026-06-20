@@ -1,3 +1,8 @@
+/* ROOT */
+html {
+  font-size: 62.5%;
+}
+
 /* RESET */
 *,
 *::before,
@@ -166,7 +171,7 @@ body {
 }
 
 .job-item__badge {
-  font-size: 13px;
+  font-size: 1.3rem;
   height: 46px;
   width: 38px;
   background-color: #dee3e9;
@@ -179,13 +184,13 @@ body {
 }
 
 .job-item__title {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-top: 4px;
 }
 
 .job-item__company {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-style: italic;
 }
 
@@ -198,7 +203,7 @@ body {
 }
 
 .job-item__time {
-  font-size: 11px;
+  font-size: 1.1rem;
   margin-top: 5px;
   color: #515459;
 }
@@ -252,7 +257,7 @@ body {
 .search__input::placeholder {
   color: rgba(0, 0, 0, 0.7);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 /* CONTAINER */
@@ -285,7 +290,7 @@ body {
 
 /* RESULTS COUNT */
 .results-count {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 /* PAGINATION */
@@ -300,11 +305,11 @@ body {
 }
 
 .pagination__page-count {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .pagination__button {
-  font-size: 14px;
+  font-size: 1.4rem;
   padding: 4px 10px;
   border-radius: 500px;
   color: #ffffff;
@@ -365,7 +370,7 @@ body {
 
 .job-details__footer-text {
   color: #858b8f;
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 /* JOB INFO */
@@ -410,7 +415,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 13px;
 }
@@ -421,25 +426,25 @@ body {
 }
 
 .job-info__time {
-  font-size: 12px;
+  font-size: 1.2rem;
   transform: translateY(1px);
   color: #494d4f;
 }
 
 .job-info__title {
-  font-size: 23px;
+  font-size: 2.3rem;
   color: #fff;
   font-weight: 500;
 }
 
 .job-info__company {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .job-info__description {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-top: 18px;
   margin-bottom: 12px;
   line-height: 1.4;
@@ -451,7 +456,7 @@ body {
 }
 
 .job-info__extra {
-  font-size: 12px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -480,13 +485,13 @@ body {
 }
 
 .qualifications__title {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .qualifications__sub-text {
-  font-size: 13px;
+  font-size: 1.3rem;
   width: 157px;
   margin-top: 3px;
 }
@@ -503,7 +508,7 @@ body {
 }
 
 .qualifications__item {
-  font-size: 13px;
+  font-size: 1.3rem;
   background-color: #e6ebee;
   border-radius: 2px;
   padding: 6px 10px;
@@ -518,13 +523,13 @@ body {
 }
 
 .reviews__title {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .reviews__sub-text {
-  font-size: 13px;
+  font-size: 1.3rem;
   width: 157px;
   margin-top: 3px;
 }
@@ -543,7 +548,7 @@ body {
 }
 
 .reviews__item {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-style: italic;
   color: #494d4f;
   position: relative;
@@ -553,7 +558,7 @@ body {
 .reviews__item::before {
   content: "\201C";
   position: absolute;
-  font-size: 50px;
+  font-size: 5rem;
   top: -15px;
   left: -10px;
   color: #d2d7db;
@@ -599,7 +604,7 @@ body {
     height: 100vh;
     padding: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .page-wrapper {
