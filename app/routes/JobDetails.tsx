@@ -6,8 +6,8 @@ import Header from "~/components/Header";
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Job Board" },
+    { name: "description", content: "Job Board" },
   ];
 }
 

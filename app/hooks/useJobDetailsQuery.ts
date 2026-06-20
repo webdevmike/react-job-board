@@ -8,12 +8,14 @@ export function useJobDetailsQuery(id: string | undefined) {
     enabled: id !== undefined,
     queryFn: async () => {
       const res = await fetch(DATA_URL);
+
       // delay to simulate network latency
       await new Promise((resolve) => setTimeout(resolve, SIMULATED_DELAY_MS));
+
       const data = await res.json();
       const thisJob = data.find((job: JobItem) => job.id === Number(id));
       const jobDetails = jobItemSchema.parse(thisJob);
-      // throw new Error("Test error");
+
       return jobDetails;
     },
   });

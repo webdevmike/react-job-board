@@ -12,7 +12,9 @@ export default function SearchForm() {
         className="search__input"
         spellCheck="false"
         type="text"
+        aria-label="Search jobs"
         placeholder="Find remote developer jobs..."
+        name="search"
         value={searchText}
         onChange={(e) => onSearchTextChange(e.target.value)}
       />
