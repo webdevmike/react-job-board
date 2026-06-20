@@ -51,11 +51,23 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <JobListProvider>
-        <Outlet />
+        <div className="page-wrapper">
+          <Outlet />
+        </div>
+        <div className="mobile-message">
+          <p>
+            Mobile view coming soon. For now, please use a device with a
+            viewport wider than 1000px.
+          </p>
+        </div>
       </JobListProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
+}
+
+export function HydrateFallback() {
+  return null;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

@@ -115,8 +115,6 @@ body {
 .header__top {
   display: flex;
   align-items: center;
-  max-width: 1000px;
-  padding: 0 12px;
   padding-top: 40px;
   margin: 0 auto;
   position: relative;
@@ -339,6 +337,11 @@ body {
 
 .job-details__content {
   height: 100%;
+}
+
+.job-details__error {
+  text-align: center;
+  padding-top: 20px;
 }
 
 .job-details__image {
@@ -582,4 +585,24 @@ body {
 .sidebar__text {
   padding-top: 20px;
   text-align: center;
+}
+
+.mobile-message {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .page-wrapper {
+    display: none;
+  }
 }

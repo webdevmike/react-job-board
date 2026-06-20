@@ -3,7 +3,7 @@ export default function Background() {
     <div className="background">
       <img
         className="background__image"
-        src="https://bytegrad.com/course-assets/js/2/pattern.svg"
+        src="/pattern.svg"
         alt="Background pattern"
       />
     </div>

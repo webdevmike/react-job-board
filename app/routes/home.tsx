@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import { useJobsQuery } from "~/hooks/useJobsQuery";
 import { useJobList } from "~/contexts/JobListContextProvider";
 import Spinner from "~/components/Spinner";
-import Error from "~/components/Error";
 
 export default function Home() {
   const { data, isLoading, isError } = useJobsQuery(1);
@@ -23,7 +22,7 @@ export default function Home() {
   }
 
   if (isError) {
-    return <Error message="Sorry, could not load jobs." />;
+    return <div>Sorry, could not load jobs.</div>;
   }
 
   return null;

@@ -8,6 +8,10 @@ export const jobItemSchema = z.object({
   badgeLetters: z.string(),
   company: z.string(),
   daysAgo: z.number(),
+  duration: z.string(),
+  salary: z.string(),
+  location: z.string(),
+  reviews: z.array(z.string()),
 });
 
 export const jobItemsSchema = z.array(jobItemSchema);
