@@ -1,5 +1,6 @@
 import { ClockIcon, ValueIcon, DrawingPinIcon } from "@radix-ui/react-icons";
 import { useParams } from "react-router";
+import { basePath } from "~/config";
 
 import Spinner from "./Spinner";
 
@@ -34,7 +35,11 @@ export default function JobItemContent() {
   return (
     <section className="job-details">
       <div className="job-details__content">
-        <img className="job-details__image" src="/job-details.avif" alt="" />
+        <img
+          className="job-details__image"
+          src={`${basePath}/job-details.avif`}
+          alt=""
+        />
 
         <section className="job-info">
           <div className="job-info__left">
