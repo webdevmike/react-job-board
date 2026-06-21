@@ -5,7 +5,7 @@ export default function Background() {
     <div className="background">
       <img
         className="background__image"
-        src={`${basePath}/pattern.svg`}
+        src={`${basePath}images/pattern.svg`}
         alt="Background pattern"
       />
     </div>

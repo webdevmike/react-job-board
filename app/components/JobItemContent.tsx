@@ -37,7 +37,7 @@ export default function JobItemContent() {
       <div className="job-details__content">
         <img
           className="job-details__image"
-          src={`${basePath}/job-details.avif`}
+          src={`${basePath}images/job-details.avif`}
           alt=""
         />
 

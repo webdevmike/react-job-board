@@ -8,4 +8,4 @@ A job board application that allows users to search and paginate through job lis
 
 ## Screenshots
 
-![Job Board](public/screenshot.png)
+![Job Board](public/images/screenshot.png)

@@ -1,5 +1,5 @@
 import { basePath } from "~/config";
 
 export const JOBS_PER_PAGE = 7;
-export const DATA_URL = `${basePath}/data.json`;
+export const DATA_URL = `${basePath}data.json`;
 export const SIMULATED_DELAY_MS = 300;
